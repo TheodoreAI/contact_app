@@ -22,15 +22,23 @@ class CardAttributes extends StatelessWidget {
         padding: const EdgeInsets.all(0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(name),
-            Text(number),
-            Text(titleName),
-            Text(website),
-            Text(email)
-          ],
+          children: returnArrayFields(),
         ),
       ),
     );
+  }
+
+  List<Widget> returnArrayFields() {
+    return [
+      Image.asset('assets/avatar.jpeg'),
+      Text(
+        name,
+        style: const TextStyle(fontWeight: FontWeight.bold),
+      ),
+      Text(number),
+      Text(titleName),
+      Text(website),
+      Text(email)
+    ];
   }
 }

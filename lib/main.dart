@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'app.dart';
 
-final String titleApp = 'Call me Maybe';
 void main() {
+  final String titleApp = 'Call Me Maybe';
   runApp(MyApp(
     title: titleApp,
   ));

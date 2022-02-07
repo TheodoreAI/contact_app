@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'components/buisness-card.dart';
+import 'components/buisness_card.dart';
 
 class MyApp extends StatelessWidget {
   final String title;
