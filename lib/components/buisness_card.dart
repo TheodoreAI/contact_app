@@ -6,8 +6,8 @@ class BuisnessCard extends StatelessWidget {
   final String nameInput = 'Mateo Estrada';
   final String numberInput = '555 555 55555';
   final String titleNameInput = 'Software Engineer';
-  final String emailInput = 'mateo@gmail.com';
-  final String websiteInput = 'mateoestrada.org';
+  final String emailInput = 'customerservice@flutter.com';
+  final String websiteInput = 'Flutter.dev';
   const BuisnessCard({Key? key, required this.title}) : super(key: key);
 
   @override

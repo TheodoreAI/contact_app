@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CardAttributes extends StatelessWidget {
   final String name;
@@ -20,9 +21,11 @@ class CardAttributes extends StatelessWidget {
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: returnArrayFields(),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: returnArrayFields(),
+          ),
         ),
       ),
     );
@@ -33,12 +36,22 @@ class CardAttributes extends StatelessWidget {
       Image.asset('assets/avatar.jpeg'),
       Text(
         name,
-        style: const TextStyle(fontWeight: FontWeight.bold),
+        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
       ),
-      Text(number),
+      getPaddingText('sms:5555555555', number),
       Text(titleName),
-      Text(website),
-      Text(email)
+      getPaddingText('https://flutter.dev', website),
+      getPaddingText('mailto:$email', email)
     ];
+  }
+
+  Widget getPaddingText(String urlType, String textValue) {
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: GestureDetector(
+        onTap: () => launch(urlType),
+        child: Text(textValue),
+      ),
+    );
   }
 }
