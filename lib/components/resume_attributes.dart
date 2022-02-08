@@ -95,6 +95,7 @@ class ResumeAttributes extends StatelessWidget {
   }
 
   Widget getPaddingText(String urlType, String textValue) {
+    // The function launches the services.
     return Padding(
       padding: const EdgeInsets.all(10),
       child: GestureDetector(
