@@ -41,7 +41,8 @@ class _ChangeTextState extends State<ChangeText> {
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
       ),
       Text(textToShow,
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+          style: const TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 20, fontFamily: 'Lora')),
     ]);
   }
 }
