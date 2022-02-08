@@ -11,7 +11,7 @@ class MainTabController extends StatelessWidget {
     Tab(text: 'Predictor')
   ];
 
-  final screens = const [BuisnessCard(), Resume(), Predictor()];
+  final screens = const [BuisnessCard(), Resume(), ChangeText()];
 
   @override
   Widget build(BuildContext context) {
