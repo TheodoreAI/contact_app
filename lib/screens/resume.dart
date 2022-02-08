@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:call_app/components/resume_attributes.dart';
 
 class Resume extends StatelessWidget {
   final String nameInput = 'Mateo Estrada';
@@ -9,6 +10,7 @@ class Resume extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Predictor');
+    return ResumeAttributes(
+        name: nameInput, email: emailInput, website: websiteInput);
   }
 }
